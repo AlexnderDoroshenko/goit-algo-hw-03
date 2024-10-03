@@ -1,4 +1,5 @@
 import turtle
+import time
 from typing import Dict, List
 
 
@@ -71,7 +72,7 @@ def hanoi_visual(t: turtle.Turtle, n: int, source: str, target: str, auxiliary: 
         draw_poles(t)
         draw_all_disks(t, positions)
         turtle.update()
-        turtle.delay(500)  # Delay for visualization
+        time.sleep(1)  # Delay for visualization
         return
 
     hanoi_visual(t, n - 1, source, auxiliary, target, positions)
